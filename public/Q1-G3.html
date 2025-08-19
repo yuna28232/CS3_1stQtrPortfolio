@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h1>Yuna Lee - 9-Strontium - Aug 11, 2025</h1>
+<h2>3rd Graded Exercise</h2>
+
+Meal Price:<input id = "mealprice" type = "number" placeholder = "Meal Price "><br>
+Tip:<input id = "tip" type = "number" placeholder = "Tip "><br>
+Service Charge:<input id = "service_charge" type = "number" placeholder = "Service Charge (%) "><br>
+
+<button onclick = "calculateTotal()"> Calculate Total</button>
+
+<div id = "totalOutput"></div>
+
+<script>
+    function calculateTotal() {
+        const mealPrice = Number(mealprice.value)
+        const myTip = Number(tip.value);
+        const serviceCharge = Number(service_charge.value);
+
+        total = mealPrice + myTip + (serviceCharge / 100 * mealPrice );
+
+        totalOutput.innerHTML = "Total Meal : Php" + total.toFixed(2);
+        alert("Total Meal : Php" + total.toFixed(2));
+        console.log("Total Meal : Php" + total.toExponential());
+    }
+</script>
+<script>
+    function changeBackground(color) {
+        document.body.style.background = color;
+    }
+window.addEventListener("load",function() { changeBackground('lightcyan') });
+
+</script>
+
+</body>
+</html>

@@ -4,16 +4,36 @@
 
     <h2> Q1 2nd Graded Exercise submitted by Yuna Lee of 9-Strontium</h2>
 
-    <!-- Enter your tags below until the script tag -->
-    
+    Meal Price:<input id = "mealprice" type = "number" placeholder = " "><br>
+    Tip:<input id = "_tip" type = "number" placeholder = " "><br>
+    Service Charge:<input id = "service_charge" type = "number" placeholder = " "><br>
+
+    <button onclick = "totalMeal()"> Accept Input</button>
+    <p><span>Total Meal: </span><span id ="totalCost"></span></p>
+
 
     <script>
         function totalMeal() {
-              // place your JS code here
+              const mp = Number(mealprice.value);
+              const tip = Number(_tip.value);
+              const sc = Number(service_charge.value);
+              
+              total = mp + tip + (sc / 100 * mp);
+              
+              totalCost.innerHTML = total.toFixed(2);
             
          
         }
     </script>
 
+    <footer>
+        <p>References:<br>
+        1. W3Schools.com. (n.d.-a). HTML Block and Inline Elements.
+        <a href="https://www.w3schools.com/html/html_blocks.asp">https://www.w3schools.com/html/html_blocks.asp</a><br>
+        2. W3Schools.com. (n.d.-b). HTML Footer Tag.
+        <a href="https://www.w3schools.com/tags/tag_footer.asp">https://www.w3schools.com/tags/tag_footer.asp</a></p>
+    </footer>
+
 </body>
 </html>
+
