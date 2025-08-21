@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+   <h2> Q1 3rd Graded Exercise submitted by Yuna Lee of 9-Strontium</h2>
+   
+   <p>Guess the number: ****</p>
+   <p>The number is from 1 to 100</p>
+   Enter your guess:<input id = "mynumber" type = "number" placeholder=" "><br>
+
+   <br><button onclick = "checkIt()"> Check It</button>
+   <p><span>Result: </span><span id ="myGuess"></span></p>
+   
+   <script>
+        
+        var dNumber = Math.floor(Math.random() * 100) + 1;
+         
+    
+        function checkIt() {
+           let myNumber = Number(mynumber.value);
+           
+           if (myNumber === dNumber) {
+                myGuess.innerHTML = "You are correct!" ;
+                document.getElementById("mynumber").value = 0;
+            } 
+            else if (myNumber > dNumber) {
+               myGuess.innerHTML = "Lower";
+               document.getElementById("mynumber").value = 0;
+            } 
+            
+            else if (myNumber < dNumber) {
+               myGuess.innerHTML = "Higher";
+              document.getElementById("mynumber").value = 0;
+            
+            }
+
+            
+        }
+    </script>
+
+    <footer>
+        <p>References:<br>
+             1. W3Schools.com. (n.d.-a). HTML Block and Inline Elements.
+        <a href="https://www.w3schools.com/html/html_blocks.asp">https://www.w3schools.com/html/html_blocks.asp</a><br>
+        2. W3Schools.com. (n.d.-b). HTML Footer Tag.
+        <a href="https://www.w3schools.com/tags/tag_footer.asp">https://www.w3schools.com/tags/tag_footer.asp</a><br>
+        3. W3Schools.com. (n.d.-c). Javascript If, Else, and Else If.
+        <a href="https://www.w3schools.com/js/js_if_else.asp">https://www.w3schools.com/js/js_if_else.asp</a></p
+    </footer>
+
+</body>
+
+</html>
